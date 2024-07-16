@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개서</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #FFB6C1; /* 연한 연분홍색 */
+            background-image: url('background-image.jpg'); /* 배경 이미지 추가 */
+            background-size: cover; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
+            background-position: center; /* 배경 이미지를 가운데 정렬 */
+            background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        section {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: white;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .content {
+            margin-left: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFFFFF; /* 하양색 */
+            color: #333; /* 글자색 */
+        }
+        button:hover {
+            background-color: #F0F0F0; /* 진한 하양색 */
+        }
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>자기소개서</h1>
+        <img class="profile-img" src="your-profile-image.jpg" alt="프로필 사진">
+        <p>이름: 서소은</p>
+        <p>생년월일: 2007.10.31</p>
+    </header>
+
+    <button onclick="toggleSection('education')">1. 학력</button>
+    <section id="education">
+        <div class="section-title">학력</div>
+        <div class="content">
+            <p>2019:옥곡초등학교 졸업<br>
+               2022:장산중학교 졸업<br>
+               2023~:사동고등학교 재학 중</p>
+        </div>
+    </section>
+
+    <button onclick="toggleSection('personality')">2. 성격</button>
+    <section id="personality">
+        <div class="section-title">성격</div>
+        <div class="content">
+            <p>낯을 많이 가리고 조금 많이 묵묵한 편이에요. 그래도 귀찮아할 때가 많지만 나름 책임감을 갖고 열심히 하려고 노력하는 편입니다!</p>
+        </div>
+    </section>
+
+    <button onclick="toggleSection('goals')">3. 인생의 목표</button>
+    <section id="goals">
+        <div class="section-title">인생의 목표</div>
+        <div class="content">
+            <p>죽을 때 후회하지 않을 정도로 제일 행복한 삶 살기</p>
+        </div>
+    </section>
+
+    <button onclick="toggleSection('hobbies')">4. 취미</button>
+    <section id="hobbies">
+        <div class="section-title">취미</div>
+        <div class="content">
+            <p>노래부르기, 춤추기, 게임하기</p>
+        </div>
+    </section>
+
+    <button onclick="toggleSection('future')">5. 장래희망</button>
+    <section id="future">
+        <div class="section-title">장래희망</div>
+        <div class="content">
+            <p>제빵사가 되어서 팔고 남은 빵은 필요한 사람에게 무료로 나눠주는 그런 삶을 꿈꾸고 있어요.</p>
+        </div>
+    </section>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
